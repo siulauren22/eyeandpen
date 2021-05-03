@@ -27,3 +27,4 @@ ax3.plot(audio);
 leg = ax1.legend();
 leg2 = ax2.legend();
 fig.savefig('plot'+str(num)+'_'+type+'.png');
+
