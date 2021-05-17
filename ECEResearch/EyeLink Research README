@@ -1,0 +1,35 @@
+EyeLink Data Visualization Research README
+
+In this project, I worked on cleaning the eyelink data and then worked to process the data into visualizations. The format of the data is hoenstly a bit annoying, but hopefully with these tips you will be able to figure it out (I have also included screenshots of SR-Support emails in this folder for
+further reference).
+
+Process:
+
+1. To get the data, you either have to convert the EDF file into .asc or you have to download the session data. This can be done in a few ways. First,
+using the the SR-Support EDF2ASC converter is the best place to start. Once you have the .asc data you can convert it into a .txt using an online
+converter. From there, I loaded it into Excel for data cleaning. The other approach is to open the .edf in DataViewer and go to the navigation bar
+and select download session data (kind of weird formatting on the export however).
+
+2. Once the data is in Excel, you will have a lot of cleaning to do. You can use my Excel file (TestTargetValues.xlsx) as a guide if you are using
+a different .edf (if it's the same .edf which for me was Ankur02.edf, I would just use my Excel). Essentially, you have to scroll to where the
+experiments start (I chose SmoothPurSustained_1 for mine) and you can see target values. You then need to comb through and get rid of any data that is
+not normal frame capture or target position (this bad data is going be called SFIX, EBLINK or other stuff like that). At the end of the day, you 
+just want the eyeposition data and target positions.
+
+3. Once this Excel file is all cleaned, remember what line the experiment you want to look at starts and load it into the Python (Jupyter Notebook)
+file (you will have have to change some for loops for the correct time stamps).
+
+4. Once the data is in a Pandas dataframe you are all set to work on it (my code is commented as well)
+
+Extra Info:
+In the .asc file (which you should convert into .txt) the data value columns are as such:
+
+TIMESTAMP  RIGHT_EYE_X  RIGHT_EYE_X  RIGHT_PUPIL_SIZE  LEFT_EYE_X  LEFT_EYE_X  LEFT_PUPIL_SIZE  WEIRD_JUNK
+
+I realize that this is a lot and a little confusing, but please feel free to reach out to me if you have any questions and I can try to answer
+the best that I can. Also, the SR-Support people (especially Kurt DeBono) at the email support@sr-research.com are fantastic at answering
+questions and respond pretty quickly.
+
+My Contact Info:
+AJ Ferrara
+201-661-1267
