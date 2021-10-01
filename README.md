@@ -3,7 +3,8 @@
 what you need:  
 eye and pen (as of 2021/5/3, it is only available on Windows)  
 read.py file  
-.eye file that you want to export  
+.eye file that you want to export 
+.tab file that you want to export
 
 Open the .eye file in eye and pen and click on File, then Exports, then Text File.   
 Save this file.   
